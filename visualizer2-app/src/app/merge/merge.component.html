@@ -1,0 +1,25 @@
+<div style="background-color:rgb(78, 75, 75);padding: 10px; " >
+   
+    
+    <span style="margin-left: 20px ;font-size: 140%;background-color: cornsilk; font-weight: 500;font-family: 'Bree Serif', serif; letter-spacing: 2px;">SORTING VISUALIZER</span>
+    <button class="btn" [disabled]="isDisabled" (click)="merge()">START</button>
+    <button class="btn" [disabled]="isDisabled" (click)="refresh()">Generate new Array</button>
+</div>
+<div class="row">
+    <app-nav class="col-sm-2"></app-nav>
+    <div class="col-sm-10">
+        <div style="margin: auto;width:20%;" [hidden]="ishidden">Choose  Size: <mat-slider min="10" max="80" step="1"  [(ngModel)]="size"  (change)="refresh()"></mat-slider> Current Size: -  {{size}}</div> 
+        <div [hidden]="block" style="height: 50px;"></div>
+        <div  style="margin-top: 20px; align-content: center; margin-left: 20%;">
+        <span *ngFor="let val of values ">
+    
+        <div  class="bars" [ngClass]="{'second': sort===val.state}" [id]=val.id [style.height.vh]=val.val [style.width.px]=5></div>
+        </span>
+    </div>
+    
+    <div style="margin-top: 15px; margin-left: 15%">
+        <p>Number of comparisions:- {{comp}}  <span style="margin-left: 30%;">Number of swaps:- {{swap}}</span> </p>
+    </div></div>
+
+
+</div>

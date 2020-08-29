@@ -1,0 +1,20 @@
+<div class="nav">
+    <button (click)="refresh()">Generate New Array</button> 
+    <button (click)="bubbleSort()">Bubble Sort</button>
+    <button (click)="mergeSort()">Merge Sort</button>
+    <button (click)="insertion()">Insertion Sort</button>
+    <button (click)="selection()">Selection Sort</button>
+    <button (click)="quick()">Quick Sort</button>
+    
+</div>
+<div  style="margin-top: 10px; align-content: center; margin-left: 10%;">
+    <span *ngFor="let val of values ">
+
+    <div  class="bars" [ngClass]="{'second': sort===val.state}" [id]=val.id [style.height.vh]=val.val [style.width.px]=5></div>
+    </span>
+</div>
+
+<div>
+    <p>Number of comparisions:- {{comp}}  <span style="margin-left: 30%;">Number of swaps:- {{swap}}</span> </p>
+</div>
+

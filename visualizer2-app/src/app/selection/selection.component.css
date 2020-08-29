@@ -1,0 +1,35 @@
+.bars{
+    margin-left: 1px;
+    margin-right: 1px;
+    background-color: yellow;
+    display: inline-block;
+    vertical-align: bottom;
+}
+button{
+    
+    margin: 5px;
+    margin-left:15%
+}
+
+
+.first{
+    background-color: green;
+}
+.second{
+    background-color: red;
+    
+}
+.tt{
+    background-color: blue;
+}
+li{
+    list-style: none;
+    background-color: burlywood;
+    width: 9%;
+    border: 1px solid black;
+    margin-top: 2px;
+    text-align: center;
+}
+p{
+    font-size: 130%;
+}
