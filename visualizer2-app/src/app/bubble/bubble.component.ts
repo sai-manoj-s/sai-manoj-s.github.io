@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class BubbleComponent implements OnInit {
 
   values: any[]=[];
+  time:number=10;
   comp:number=0;
   swap:number=0;
   isDisabled:boolean=false
@@ -20,7 +21,9 @@ export class BubbleComponent implements OnInit {
   ngOnInit(): void {
     this.createArray();
   }
-
+  stop(){
+    this.time=0;
+  }
 
 
   async refresh(){
@@ -29,8 +32,9 @@ export class BubbleComponent implements OnInit {
     this.swap=0;
     this.ishidden=false;
     this.block=true;
+    this.isDisabled=false;
 
-  await this.delay(10)
+  await this.delay(this.time)
    
     this.createArray();
     console.log(this.values.length)
@@ -66,7 +70,7 @@ export class BubbleComponent implements OnInit {
     element1.style.backgroundColor = "green"
     element2.style.backgroundColor = "blue"
 
-    await this.delay(10);
+    await this.delay(this.time);
 
     element1.style.backgroundColor = "yellow"
     element2.style.backgroundColor = "yellow"
@@ -76,7 +80,7 @@ export class BubbleComponent implements OnInit {
         
     this.comp=this.comp+1;
     if(this.values[index].val>this.values[index+1].val){
-        await this.delay(10);
+        await this.delay(this.time);
         this.swap=this.swap+1;
         let temp=this.values[index].val;
         this.values[index].val=this.values[index+1].val;
