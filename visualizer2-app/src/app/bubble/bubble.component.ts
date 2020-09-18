@@ -35,9 +35,16 @@ export class BubbleComponent implements OnInit {
     this.isDisabled=false;
 
   await this.delay(this.time)
+  document.getElementById('link1').style.pointerEvents="all"
+  document.getElementById('link2').style.pointerEvents="all"
+  document.getElementById('link3').style.pointerEvents="all"
+  document.getElementById('link4').style.pointerEvents="all"
+  document.getElementById('link5').style.pointerEvents="all"
    
     this.createArray();
     console.log(this.values.length)
+    this.ishidden=false;
+    this.block=true;
    
   }
 

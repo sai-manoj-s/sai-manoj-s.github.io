@@ -10,6 +10,7 @@ export class MergeComponent implements OnInit {
   values: any[]=[];
   dup:number[][]=[]
   ids:number[][][]=[];
+  time:number=10;
   comp:number=0;
   swap:number=0;
   isDisabled:boolean=false
@@ -27,6 +28,9 @@ export class MergeComponent implements OnInit {
    ngOnInit(): void {
    this.createArray();
   }
+  stop(){
+    this.time=0;
+  }
   
   createArray(){  
     for (let index = 0; index < this.size; index++) {
@@ -42,7 +46,15 @@ export class MergeComponent implements OnInit {
     this.ishidden=false;
     this.block=true;
 
-  await this.delay(10)
+  await this.delay(this.time)
+  document.getElementById('link1').style.pointerEvents="all"
+  document.getElementById('link2').style.pointerEvents="all"
+  document.getElementById('link3').style.pointerEvents="all"
+  document.getElementById('link4').style.pointerEvents="all"
+  document.getElementById('link5').style.pointerEvents="all"
+  this.isDisabled=false;
+  this.ishidden = false
+    this.block=true
    
   
    this. dup=[]
@@ -54,6 +66,8 @@ export class MergeComponent implements OnInit {
     this.id2=0;
     this.createArray();
     console.log(this.values)
+    this.ishidden=false;
+    this.block=true;
   } 
 
   async merge(){
@@ -74,7 +88,7 @@ export class MergeComponent implements OnInit {
     }
   
   this.mergeSortRange(dupli,0,this.values.length-1);
-   await this.delay(1000)
+   await this.delay(50*this.time)
    console.log(dupli)
    console.log(this.values)
    console.log(this.dup)
@@ -90,7 +104,7 @@ export class MergeComponent implements OnInit {
       element1.style.backgroundColor = "green"
       element2.style.backgroundColor = "blue"
  
-      await this.delay(30);
+      await this.delay(2*this.time);
  
  
       element1.style.backgroundColor = "yellow"
@@ -101,24 +115,25 @@ export class MergeComponent implements OnInit {
   
     for (let indexs= 0; indexs < this.dup[index].length; indexs++) {
      this.values[indexs].val=this.dup[index][indexs];
-     await this.delay(1)
+     await this.delay(this.time/10)
     
    }
   }
   for (let index = 0; index < this.values.length; index++) {
    document.getElementById(JSON.stringify(index)).style.backgroundColor="red";
-   await this.delay(5)
+   await this.delay(this.time/2)
     
   }
-  this.isDisabled=false;
-this.ishidden = false
-  this.block=true
+ 
   document.getElementById('link1').style.pointerEvents="all"
     document.getElementById('link2').style.pointerEvents="all"
     document.getElementById('link3').style.pointerEvents="all"
     document.getElementById('link4').style.pointerEvents="all"
+    debugger;
     document.getElementById('link5').style.pointerEvents="all"
- 
+    this.isDisabled=false;
+    this.ishidden = false
+      this.block=true
  
  
  }

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./insertion.component.css']
 })
 export class InsertionComponent implements OnInit {
-
+  time:number=10;
   values: any[]=[];
   comp:number=0;
   swap:number=0;
@@ -19,7 +19,9 @@ export class InsertionComponent implements OnInit {
   ngOnInit(): void {
     this.createArray();
   }
-
+  stop(){
+    this.time=0;
+  }
 
 
  async  refresh(){
@@ -28,9 +30,17 @@ export class InsertionComponent implements OnInit {
     this.swap=0;
     this.ishidden=false;
     this.block=true;
-    await this.delay(10)
+    await this.delay(this.time)
+    document.getElementById('link1').style.pointerEvents="all"
+    document.getElementById('link2').style.pointerEvents="all"
+    document.getElementById('link3').style.pointerEvents="all"
+    document.getElementById('link4').style.pointerEvents="all"
+    document.getElementById('link5').style.pointerEvents="all"
    
     this.createArray();
+    this.ishidden=false;
+    this.block=true;
+   
    
   }
 
@@ -66,7 +76,7 @@ async insertion(){
         element1.style.backgroundColor = "green"
         element2.style.backgroundColor = "blue"
         this.comp++
-        await this.delay(10);
+        await this.delay(this.time);
 
         element1.style.backgroundColor = "yellow"
         element2.style.backgroundColor = "yellow"
@@ -80,7 +90,7 @@ async insertion(){
   }
   for (let index = 0; index < len; index++) {
    document.getElementById(JSON.stringify(index)).style.backgroundColor="red";
-   await this.delay(5)
+   await this.delay(this.time/2)
     
   }
   this.isDisabled=false

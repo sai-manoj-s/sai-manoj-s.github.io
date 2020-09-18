@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quick.component.css']
 })
 export class QuickComponent implements OnInit {
-
+  time:number=10;
   values: any[]=[];
   comp:number=0;
   swap:number=0;
@@ -19,20 +19,35 @@ export class QuickComponent implements OnInit {
   ngOnInit(): void {
     this.createArray();
   }
-
+  stop(){
+    this.time=-10;
+  }
 
 
   async refresh(){
     this.values=[];
     this.comp=0;
     this.swap=0;
-    this.ishidden=false;
+    this.time=10;
+    this.ishidden=false;  
     this.block=true;
 
-    await this.delay(10)
-  
+    await this.delay(this.time)
+    document.getElementById('link1').style.pointerEvents="all"
+  document.getElementById('link2').style.pointerEvents="all"
+  document.getElementById('link3').style.pointerEvents="all"
+  document.getElementById('link4').style.pointerEvents="all"
+  document.getElementById('link5').style.pointerEvents="all"
+  this.isDisabled=false;
+  this.ishidden = false
+    this.block=true
    
     this.createArray();
+    console.log(this.values.length)
+    this.ishidden=false;
+    this.block=true;
+    this.isDisabled=false;
+    
    
   }
 
@@ -54,21 +69,23 @@ export class QuickComponent implements OnInit {
     document.getElementById('link5').style.pointerEvents="none"
 
    await  this.sort(this.values,0,this.values.length-1)
-   this.isDisabled=false;
-   this.ishidden = false
-     this.block=true
+   
      document.getElementById('link1').style.pointerEvents="all"
     document.getElementById('link2').style.pointerEvents="all"
     document.getElementById('link3').style.pointerEvents="all"
     document.getElementById('link4').style.pointerEvents="all"
     document.getElementById('link5').style.pointerEvents="all"
+    this.isDisabled=false;
+   this.ishidden = false
+     this.block=true
+     this.refresh()
   }
   
   async sort(val:any[],low:number,high:number){
     if(low<high){
        let pivotIndex:number= await this.partition(this.values,low,high)
       document.getElementById(JSON.stringify(pivotIndex)).style.backgroundColor="red"
-      await this.delay(200)
+      await this.delay(this.time*20)
      await this.sort(this.values,low,pivotIndex-1);
       await this.sort(this.values,pivotIndex+1,high);
     }
@@ -95,7 +112,7 @@ export class QuickComponent implements OnInit {
       element1.style.backgroundColor = "green"
       element2.style.backgroundColor = "blue"
       this.comp++
-     await this.delay(20)
+     await this.delay(this.time*2)
   
       element1.style.backgroundColor = "yellow"
       element2.style.backgroundColor = "yellow"

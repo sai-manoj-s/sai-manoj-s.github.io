@@ -4,7 +4,7 @@
     <span style="margin-left: 20px ;font-size: 140%;background-color: cornsilk; font-weight: 500;font-family: 'Bree Serif', serif; letter-spacing: 2px;">SORTING VISUALIZER</span>
 <button  class="btn "  [disabled]="isDisabled" (click)="quick()">START</button>
 <button class="btn " [disabled]="isDisabled"  (click)="refresh()">Generate new Array</button>
-<button  class="btn" [hidden]="block" (click)="refresh()">Stop </button>
+<button  class="btn btn-danger" [disabled]="!isDisabled" [hidden]="block" (click)="stop()">Stop </button>
 
 </div>
 
