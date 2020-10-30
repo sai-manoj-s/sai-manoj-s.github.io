@@ -58,7 +58,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n\nhtml, body { height: 100%; width: 101%;overflow: hidden;}\n\nbody { margin: 0; font-family: Roboto, \"Helvetica Neue\", sans-serif; }\n\n.bg{\n    height: 100vh;\n    width: 100%;\n  \n    background: url('background.jpg')  no-repeat fixed center;\n    background-size: cover;\n    filter: blur(80);\n}", "",{"version":3,"sources":["styles.css"],"names":[],"mappings":"AAAA,8EAA8E;;AAE9E,aAAa,YAAY,EAAE,WAAW,CAAC,gBAAgB,CAAC;;AACxD,OAAO,SAAS,EAAE,iDAAiD,EAAE;;AACrE;IACI,aAAa;IACb,WAAW;;IAEX,yDAAuE;IACvE,sBAAsB;IACtB,gBAAgB;AACpB","file":"styles.css","sourcesContent":["/* You can add global styles to this file, and also import other style files */\n\nhtml, body { height: 100%; width: 101%;overflow: hidden;}\nbody { margin: 0; font-family: Roboto, \"Helvetica Neue\", sans-serif; }\n.bg{\n    height: 100vh;\n    width: 100%;\n  \n    background: url('assets/image/background.jpg')  no-repeat fixed center ;\n    background-size: cover;\n    filter: blur(80);\n}"]}]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\r\n\r\nhtml, body { height: 100%; width: 101%;overflow: hidden;}\r\n\r\nbody { margin: 0; font-family: Roboto, \"Helvetica Neue\", sans-serif; }\r\n\r\n.bg{\r\n    height: 100vh;\r\n    width: 100%;\r\n  \r\n    background: url('background.jpg')  no-repeat fixed center;\r\n    background-size: cover;\r\n    filter: blur(80);\r\n}", "",{"version":3,"sources":["styles.css"],"names":[],"mappings":"AAAA,8EAA8E;;AAE9E,aAAa,YAAY,EAAE,WAAW,CAAC,gBAAgB,CAAC;;AACxD,OAAO,SAAS,EAAE,iDAAiD,EAAE;;AACrE;IACI,aAAa;IACb,WAAW;;IAEX,yDAAuE;IACvE,sBAAsB;IACtB,gBAAgB;AACpB","file":"styles.css","sourcesContent":["/* You can add global styles to this file, and also import other style files */\r\n\r\nhtml, body { height: 100%; width: 101%;overflow: hidden;}\r\nbody { margin: 0; font-family: Roboto, \"Helvetica Neue\", sans-serif; }\r\n.bg{\r\n    height: 100vh;\r\n    width: 100%;\r\n  \r\n    background: url('assets/image/background.jpg')  no-repeat fixed center ;\r\n    background-size: cover;\r\n    filter: blur(80);\r\n}"]}]);
 // Exports
 module.exports = exports;
 
@@ -486,8 +486,8 @@ module.exports = content.locals || {};
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /media/manoj/7A8CC1658CC11C8F/algovisual/visualizer2-app/node_modules/@angular/material/prebuilt-themes/indigo-pink.css */"./node_modules/@angular/material/prebuilt-themes/indigo-pink.css");
-module.exports = __webpack_require__(/*! /media/manoj/7A8CC1658CC11C8F/algovisual/visualizer2-app/src/styles.css */"./src/styles.css");
+__webpack_require__(/*! D:\manoj\angular\visualizer\sorting-visualizer\visualizer2-app\node_modules\@angular\material\prebuilt-themes\indigo-pink.css */"./node_modules/@angular/material/prebuilt-themes/indigo-pink.css");
+module.exports = __webpack_require__(/*! D:\manoj\angular\visualizer\sorting-visualizer\visualizer2-app\src\styles.css */"./src/styles.css");
 
 
 /***/ })
